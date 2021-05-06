@@ -24,7 +24,7 @@ and open the template in the editor.
                 </thead>
                 <tbody>
                     <tr th:if="${clientes.empty}">
-                        <td colspan="3">Sem Clientes</td>                        
+                        <td colspan="2">Sem Clientes</td>                        
                     </tr>
                     <tr th:each="cliente : ${clientes}">
                         <td th:text="${cliente.id}">id</td>

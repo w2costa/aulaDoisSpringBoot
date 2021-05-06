@@ -12,6 +12,7 @@ and open the template in the editor.
     </head>
     <body>
         <div><h1>Cliente</h1></div>
+        <div th:if="${globalMessage}" th:text="${globalMessage}">mensagem</div>
         <div>
             <table border="1">
                 <thead>
@@ -32,7 +33,7 @@ and open the template in the editor.
             <div>
                 <a href="form.html" th:href="@{'/clientes/alterar/' + ${cliente.id}}">alterar</a>
                 | <a href="clientes" th:href="@{'/clientes/remover/' + ${cliente.id}}">remover</a>
-                | <a th:href="@{/clientes/}" href="list.html">voltar</a>
+                | <a th:href="@{/clientes/}" >voltar</a>
             </div>
 
         </div>

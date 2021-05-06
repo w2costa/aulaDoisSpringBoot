@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<!--
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+-->
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="http://www.thymeleaf.org">
+
+    <head>
+        <title>Cliente</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    </head>
+
+    <body>
+        <h1>Cadastro de cliente</h1>
+        <div>
+            <div>
+                <form id="clienteForm" th:action="@{/clientes/(form)}" th:object="${cliente}" action="#" method="post">
+                    <input type="hidden" th:field="*{id}" />
+                    <div>
+                        <label for="nome">Nome</label> 
+                        <input type="text" th:field="*{nome}" />
+                    </div>
+                    <div>  
+                        <label for="text">Endereço</label>
+                        <textarea th:field="*{endereco}"></textarea>
+                    </div>
+                    <div>
+                        <input type="submit" value="Gravar" />
+                    </div>
+                </form>
+            </div>
+        </div>
+    </body>
+
+</html>
